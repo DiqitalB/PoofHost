@@ -3,6 +3,16 @@ body {
   padding: 0;
   overflow: hidden;
 }
+@keyframes MainShow {
+  0% {
+    transform: rotate(0) scale(0.5) translateY(-200%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
 $transparency: 0.7;
 $font: "Marck Script";
 $background: linear-gradient(
@@ -16,7 +26,7 @@ $background: linear-gradient(
   height: 100vh;
   position: absolute;
   z-index: 0;
-  // background-image: url("https://i.ibb.co/wM3LWfK/Bby.png");
+  background-image: url("https://i.ibb.co/wM3LWfK/Bby.png");
   background-size: contain;
   display: flex;
   justify-content: center;
@@ -43,4 +53,5 @@ $background: linear-gradient(
   font-size: 2vw;
   font-family: $font;
   color: whitesmoke;
+  animation: MainShow 2s 1 0s ease;
 }
